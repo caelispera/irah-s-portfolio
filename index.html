@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Irah's Portfolio</title>
+	<style>
+		html {
+			scroll-behavior: smooth;
+		}
+
+		html body {
+			margin: 0;
+			padding: 0;
+		}
+
+		nav {
+			background: #FDF8E1;
+			padding: 10px;
+			text-align: center;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 150px;
+		}
+
+		nav a {
+			text-decoration: none;
+			color: #563D2D;
+			font-family: 'poppins';
+			font-size: 15px;
+		}
+
+		nav .title {
+			font-family: 'idealist';
+			font-weight: normal;
+			text-align: center;
+			font-size: 70px;
+			color: #563D2D;
+			margin: 0 30px;
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+
+		@font-face {
+			font-family: 'thaleahfat';
+			src: url('fonts/thaleahfat.woff2') format('woff2');
+			font-style: normal;
+			font-weight: normal;
+		}
+
+		@font-face {
+			font-family: 'whitegarden';
+			src: url('fonts/whitegarden.woff2') format('woff2');
+			font-style: normal;
+			font-weight: normal;
+		}
+
+		@font-face {
+			font-family: 'baskervilleneo';
+			src: url('fonts/baskervilleneo.woff2') format('woff2');
+			font-style: normal;
+			font-weight: normal;
+		}
+
+		@font-face {
+			font-family: 'idealist';
+			src: url('fonts/idealist.woff2') format('woff2');
+			font-style: normal;
+			font-weight: normal;
+		}
+
+		@font-face {
+			font-family: 'poppins';
+			src: url('fonts/poppins.woff2') format('woff2');
+			font-style: normal;
+			font-weight: normal;
+		}
+
+		section {
+			width: 100%;
+			box-sizing: border-box;
+		}
+
+		.homepage {
+			background-image: url('https://i.postimg.cc/kGHcXN7Q/a006f901c427ce7b6f7ebd62a65b70be.jpg');
+			background-size: cover;
+			width: 100%;
+		}
+
+		.section1 {
+			background-color: #D0E4EE;
+		}
+
+		.section2 {
+			background-color: #97C1A9;
+		}
+
+		.section3 {
+			background-color: #FFDBCC;
+		}
+
+		h1 {
+			font-family: 'idealist';
+			font-weight: normal;
+			text-align: center;
+			font-size: 70px;
+			color: #563D2D;
+		}
+
+		h2 {
+			font-family: 'idealist';
+			font-size: 50px;
+			text-align: left;
+			margin-left: 30px;
+			margin-right: 30px;
+			margin-bottom: 0;
+			margin-top: 0;
+			color: black;
+		}
+
+		p {
+			font-family: 'poppins';
+			font-size: 15px;
+			text-align: justify;
+			margin-left: 30px;
+			margin-right: 30px;
+			color: black;
+		}
+
+		#home {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 40px;
+			padding: 30px;
+		}
+
+		#home .text-container {
+			max-width: 60%;
+		}
+
+		#img1 {
+			height: 50vh;
+			border-radius: 15px;
+			padding: 0;
+		}
+
+		#aboutme {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 40px;
+			padding: 40px 30px;
+		}
+
+		#aboutme .text-container {
+			max-width: 50%;
+			color: #563D2D;
+			font-family: 'poppins';
+		}
+
+		#aboutme h2 {
+			font-family: 'idealist';
+			font-size: 50px;
+			margin-bottom: 20px;
+			color: #563D2D;
+			text-align: left;
+		}
+
+		#aboutme p {
+			font-size: 16px;
+			line-height: 1.6;
+			text-align: justify;
+			color: #563D2D;
+		}
+
+		#img2 {
+			height: 50vh;
+			border-radius: 15px;
+			display: block;
+			margin: 0;
+			flex-shrink: 0;
+		}
+
+		#projects {
+			padding: 50px 30px;
+			text-align: center;
+		}
+
+		#projects h2 {
+			font-family: 'idealist';
+			font-size: 50px;
+			color: #563D2D;
+			margin-bottom: 30px;
+			text-align: center;
+		}
+
+		.projects-container {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+			gap: 20px;
+			max-width: 1000px;
+			margin: 0 auto;
+		}
+
+		.project-card {
+			background: #ffffffaa;
+			border-radius: 15px;
+			padding: 15px;
+			box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+			transition: transform 0.3s ease, box-shadow 0.3s ease;
+		}
+
+		.project-card:hover {
+		  	transform: translateY(-5px);
+			box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+		}
+
+		.project-card img {
+			width: 100%;
+			height: auto;
+			border-radius: 10px;
+		}
+
+		.project-card h3 {
+			font-family: 'poppins';
+			color: #563D2D;
+			margin: 10px 0 5px;
+		}
+
+		.project-card p {
+			font-family: 'poppins';
+			font-size: 14px;
+			color: #563D2D;
+		}
+
+		#contact {
+			padding: 50px 30px;
+			text-align: center;
+			}
+
+		#contact h2 {
+			font-family: 'idealist';
+			font-size: 50px;
+			color: #563D2D;
+			margin-bottom: 20px;
+			text-align: center;
+		}
+
+		.contact-container {
+			max-width: 600px;
+			margin: 0 auto;
+			background: #ffffffaa;
+			padding: 20px;
+			border-radius: 15px;
+			box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+		}
+
+		.contact-container p {
+			font-family: 'poppins';
+			color: #563D2D;
+			font-size: 16px;
+		}
+
+		.contact-container ul {
+			list-style: none;
+			padding: 0;
+			margin: 15px 0 0;
+		}
+
+		.contact-container li {
+			font-family: 'poppins';
+			color: #563D2D;
+			margin: 5px 0;
+		}
+
+		.contact-container a {
+			color: #563D2D;
+			text-decoration: underline;
+		}
+
+		#img1, #img2 {
+			transition: transform 0.4s ease;
+		}
+
+		#img1:hover, #img2:hover {
+			transform: scale(1.05);
+		}
+
+
+		@media (max-width: 768px) {
+			#home {
+				flex-direction: column;
+				text-align: center;
+			}
+
+			#home .text-container {
+				max-width: 90%;
+			}
+
+			#img1 {
+				height: auto;
+				width: 80%;
+			}
+		}
+
+		.fade-in {
+			opacity: 0;
+			transform: translateY(20px);
+			transition: all 0.6s ease-out;
+		}
+
+		.fade-in.show {
+			opacity: 1;
+			transform: translateY(0);
+		}
+
+		nav a {
+			transition: text-shadow 0.3s ease;
+		}
+
+		nav a:hover {
+			text-shadow: 0 0 5px rgba(255,255,255,0.6);
+		}
+
+		.homepage {
+			background-attachment: fixed;
+			background-position: center;
+		}
+
+	</style>
+</head>
+<body>
+		<nav>
+			<a href="#home">HOME</a>
+			<a href="#aboutme">ABOUT ME</a>
+			<span class="title">Irah's Portfolio</span>
+			<a href="#projects">PROJECTS</a>
+			<a href="#contact">CONTACTS</a>
+		</nav>
+
+		<section id="home" class="homepage fade-in">
+			<img id="img1" src="https://i.postimg.cc/GtJwfHKk/Untitled-design-2.png" alt="photo">
+			<div class="text-container">
+				<h2 id="typing-text"></h2>
+				<p>I am currently in my third semester of the course, steadily building my foundation in programming and web development. My interest in coding began back in high school, where I was first introduced to the fundamentals of technology through IGCSE ICT for my ‘O’ Levels. This early exposure sparked my curiosity, which grew further when I took Computer Science for my ‘A’ Levels and learned more about programming concepts, problem-solving, and logical thinking. Since then, I have continued to practice and expand my skills through coursework and personal projects. At this stage, I would describe my programming abilities as being at a junior level, but I am eager to keep learning and improving as I work on more challenging projects. </p>
+
+		</section>
+
+		<section id="aboutme" class="section1 fade-in">
+			<div class="text-container">
+				<h2>About Me</h2>
+				<p>Hi, I’m Nur Syahirah, but everyone calls me Irah. I’m really into web technology because I love how it mixes creativity and problem-solving. Figuring out how websites work, making them look nice, and making sure they feel easy to use is something I enjoy. I’m still experimenting and learning new things, but that’s the fun part — every project teaches me something.</p>
+
+				<p>Most of my free time goes to reading manhwa, especially reincarnation or historical romance ones. Real-life love feels kind of hopeless, so I end up simping over fictional characters instead. The art and outfits are always so elegant, and the sometimes-green-flag-but-mostly-red-flag male leads? Nothing in real life compares. I spend hours in bed reading, and I’m fine with that.</p>
+
+				<p>Music and overthinking take up the rest of my time. On road trips or when I feel down, I blast whatever song matches my mood — sometimes sad, sometimes upbeat. I also spend way too long staring out of windows like a main character, thinking about past mistakes and random memories. I overthink everything, but I guess that’s just how I am.</p>
+			</div>
+			<img id="img2" src="https://i.postimg.cc/bNWH53G9/Untitled-design-3.png">
+		</section>
+
+		<section id="projects" class="section2 fade-in">
+			<h2>Projects</h2>
+			<div class="projects-container">
+				<div class="project-card">
+					<img src="https://i.postimg.cc/7hX5vRCB/Screenshot-2025-07-19-012452.png" alt="Parfumerie Vault">
+					<h3>01 Parfumerie Vault</h3>
+					 <p>A web-based application designed to showcase and manage a collection of perfumes. My team and I focused on building a responsive front-end using HTML, CSS, and JavaScript to create an intuitive and visually appealing user interface. The project involved implementing dynamic navigation, product filtering, and interactive elements to enhance user experience, while ensuring cross-browser compatibility and mobile responsiveness.</p>
+			    </div>
+
+			    <div class="project-card">
+			    	<img src="https://i.postimg.cc/XqvV5YJ8/Screenshot-2025-07-19-013141.png" alt="Customer Management System">
+			    	<h3>02 Customer Management System</h3>
+			    	<p>A small-scale web application developed to streamline customer data management. We worked on both the front-end form design and basic backend logic, using HTML forms for data input and JavaScript for validation and interactivity. This project deepened my understanding of CRUD operations, data handling, and user experience considerations in a client-server environment.</p>
+			    </div>
+
+			    <div class="project-card">
+			    	<img src="https://i.postimg.cc/CKVSNN5d/Screenshot-2025-07-19-012859.png" alt="Python Car Inventory System">
+			    	<h3>03 Python Car Inventory Program</h3>
+			    	<p>A Python program designed to manage a car inventory, utilizing object-oriented programming principles. The program allowed for adding, removing, and updating car records, with features for sorting and searching through the inventory. This project strengthened my skills in class design, data structures (like lists and dictionaries), file handling for data persistence, and algorithmic thinking to implement efficient search and sort functionalities.</p>
+			    </div>
+			</div>
+		</section>
+
+		<section id="contact" class="section3 fade-in">
+			<h2>Contact Me</h2>
+			<div class="contact-container">
+				<p>If you’d like to know more about me, ask questions, or just say hi, feel free to reach out!</p>
+				<ul>
+					<li><strong>Email:</strong> 24FTT1091@student.pb.edu.bn</li>
+					<li><strong>Phone Number:</strong> <a href="#">+673 8762977</a></li>
+					<li><strong>GitHub:</strong> <a href="#">github.com/caelispera</a></li>
+				</ul>
+			</div>
+		</section>
+
+
+	<script>
+	document.addEventListener("scroll", () => {
+		document.querySelectorAll(".fade-in").forEach((el) => {
+			const rect = el.getBoundingClientRect();
+		    if (rect.top < window.innerHeight - 50) {
+		      el.classList.add("show");
+		    }
+		});
+	});
+
+	const text = "Hello there!";
+	let i = 0;
+	function typeWriter() {
+		if (i < text.length) {
+			document.getElementById("typing-text").innerHTML += text.charAt(i);
+			i++;
+			setTimeout(typeWriter, 100);
+	  	}
+	}
+
+	window.onload = typeWriter;
+
+	</script>
+
+</body>
+</html>
